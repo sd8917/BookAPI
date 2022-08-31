@@ -1,0 +1,11 @@
+
+
+GET : http://localhost:4000/api/books  - get all the books
+POST : http://localhost:4000/api/books  - Create a new book
+
+GET: http://localhost:4000/api/books/:id  - get a specific book by id
+DELETE: http://localhost:4000/api/books/:id  - Delete a specific books by id
+Patch : http://localhost:4000/api/books/:id  - Update a books by specific id
+
+
+DATABASE NAME : BookAPI
