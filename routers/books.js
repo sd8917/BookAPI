@@ -54,4 +54,26 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+// UPDATE THE BOOK BY ID
+router.patch("/:id", (req, res) => {
+  try {
+    Book.findByIdAndUpdate(
+      { _id: req.params.id },
+      {
+        title: req.body.title,
+        isbn: req.body.isbn,
+        desc: req.body.desc,
+        author: req.body.author,
+        genre: req.body.genre,
+        page: req.body.page,
+      },
+      (error, book) => {
+        console.log("This object wil get updated !", book);
+      }
+    );
+
+    res.json({ message: "Book updated successfully !!" });
+  } catch (error) {}
+});
+
 module.exports = router;
